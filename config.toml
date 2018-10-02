@@ -3,16 +3,17 @@ languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "dopetrope"
 
-[params.portfolio]
-    title = "My Portfolio"
-    foldername = "portfolio"
-    findoutmoretext = "Find out more"
+[params]
 
 [params.blog]
-    title = "The Blog"
-    viewalltext = "View All"
-    foldername = "blog"
+foldername = "blog"
+title = "The Blog"
+viewalltext = "View All"
+
+[params.portfolio]
+findoutmoretext = "Find out more"
+foldername = "portfolio"
+title = "My Portfolio"
 
 [params.settings]
-    googleanalytics = "UA-113904582-2"
-    disqus = "hugo-dopetrope"
+googleanalytics = "UA-000000000-1"
