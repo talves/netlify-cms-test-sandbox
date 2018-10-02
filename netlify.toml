@@ -1,0 +1,5 @@
+[build]
+  command = "yarn build"
+  publish = "public"
+  HUGO_VERSION = "0.49"
+  
