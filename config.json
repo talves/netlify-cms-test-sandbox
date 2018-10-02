@@ -1,0 +1,143 @@
+{
+  "backend": {
+    "name": "github",
+    "repo": "talves/netlify-cms-test-sandbox",
+    "branch": "master"
+  },
+  "display_url": "https://netlify-cms-cra-example.netlify.com",
+  "media_folder": "static/images",
+  "public_folder": "/images",
+  "collections": [{
+    "name": "config",
+    "label": "Config",
+    "files": [{
+      "file": "config.toml",
+      "name": "hugo_config",
+      "label": "Hugo Config",
+      "fields": [{
+        "name": "baseURL",
+        "label": "Base URL",
+        "widget": "string",
+        "required": true
+      }, {
+        "name": "languageCode",
+        "label": "Language Code",
+        "widget": "string",
+        "required": true
+      }, {
+        "name": "title",
+        "label": "Site Title",
+        "widget": "string"
+      }, {
+        "name": "theme",
+        "label": "Theme Folder Name",
+        "widget": "string",
+        "required": false
+      }, {
+        "widget": "object",
+        "name": "params",
+        "label": "Parameter Variables for Hugo Site",
+        "fields": [{
+          "widget": "object",
+          "name": "portfolio",
+          "label": "Portfolio Variables",
+          "required": true,
+          "fields": [{
+            "widget": "string",
+            "name": "title",
+            "label": "Portfolio Title",
+            "default": "My Portfolio"
+          }, {
+            "widget": "string",
+            "name": "foldername",
+            "label": "Portfolio Folder Name",
+            "default": "portfolio",
+            "required": true
+          }, {
+            "widget": "string",
+            "name": "findoutmoretext",
+            "label": "Portfolio More Text",
+            "default": "More..."
+          }]
+        }, {
+          "widget": "object",
+          "name": "blog",
+          "label": "Blog Settings",
+          "fields": [{
+            "widget": "string",
+            "name": "title",
+            "label": "Blog Title",
+            "default": "The Blog"
+          }, {
+            "widget": "string",
+            "name": "viewalltext",
+            "label": "Blog View All Title",
+            "default": "View All"
+          }, {
+            "widget": "string",
+            "name": "foldername",
+            "label": "Blog Folder Name",
+            "default": "blog",
+            "required": true
+          }]
+        }, {
+          "widget": "object",
+          "name": "settings",
+          "label": "Global Settings",
+          "fields": [{
+            "widget": "string",
+            "name": "googleanalytics",
+            "label": "Google Analytics UA",
+            "default": "UA-000000000-1"
+          }]
+        }]
+      }]
+    }]
+  }, {
+    "name": "blog",
+    "label": "Blog",
+    "folder": "content/blog",
+    "fields": [{
+      "widget": "string",
+      "name": "title",
+      "label": "Title"
+    }, {
+      "widget": "string",
+      "name": "description",
+      "label": "Description",
+      "required": false
+    }, {
+      "widget": "datetime",
+      "name": "date",
+      "label": "Date",
+      "format": "YYYY-MM-DDTHH:MM:SS"
+    }, {
+      "widget": "image",
+      "name": "thumbnail",
+      "label": "Thumbnail Image"
+    }, {
+      "widget": "string",
+      "name": "slug",
+      "label": "Slug"
+    }, {
+      "widget": "string",
+      "name": "author",
+      "label": "Author Name",
+      "default": "Administrator"
+    }, {
+      "widget": "boolean",
+      "name": "draft",
+      "label": "Draft (True/False)"
+    }, {
+      "widget": "string",
+      "name": "disqusid",
+      "label": "Disqus ID"
+    }, {
+      "widget": "markdown",
+      "name": "body",
+      "label": "Body",
+      "required": true
+    }],
+    "create": true
+  }]
+}
